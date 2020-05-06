@@ -24,3 +24,19 @@ $(document).ready(function () {
   });
 
 });
+
+var btnClose = document.querySelector('#btnclose');
+var searchBox = document.querySelector('.search-box');
+var open = true;
+btnClose.addEventListener('click', ()=>{
+  if(open){
+    searchBox.style.display = "none";
+    searchBox.style.transition = "all 1s ease";
+    btnClose.innerHTML = "<span> <i class='fas fa-chevron-down'></i> بحث متقدم</span>"
+  }else{
+    searchBox.style.display = "block";
+    searchBox.style.transition = "all 1s ease";
+    btnClose.innerHTML = "<span> <i class='fas fa-chevron-up'></i> بحث متقدم</span>"
+  }
+  open= !open;
+})

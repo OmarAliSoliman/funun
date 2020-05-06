@@ -60,6 +60,14 @@ body {
       margin-left: 4px !important;
       font-size: 13px; }
 
+#btnclose {
+  background-color: #ddd;
+  width: 100% !important;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 1s ease-in-out; }
+
 .slider .carousel-inner .carousel-item {
   background-size: cover;
   background-position: center;
@@ -167,11 +175,14 @@ body {
       .ads-search .ads .card .key-words span:last-child {
         font-size: 15px;
         color: #e5233d;
-        font-weight: bold; }
+        font-weight: bold;
+        position: absolute;
+        left: 2%; }
   .ads-search .ads .type-grow {
-    text-align: right !important;
+    text-align: center !important;
     border: 1px solid #69bc2a !important;
-    background-color: #69bc2a !important; }
+    background-color: #69bc2a !important;
+    padding-right: 0 !important; }
   .ads-search .ads .grow-card .key-words .last {
     color: #69bc2a !important; }
   .ads-search .ads .swiper-container {
@@ -204,10 +215,24 @@ body {
     .ads-search .part .ad-card .add-your-ad .content {
       padding-top: 40px; }
 .ads-search .ads-now {
-  padding-bottom: 30px;
+  padding-bottom: 70px;
   border: 1px solid #ddd; }
   .ads-search .ads-now h6 {
     margin: 0; }
+  .ads-search .ads-now .type {
+    background-color: #e5233d;
+    border: 1px solid #e5233d;
+    text-align: center !important;
+    padding-top: 0 !important;
+    padding-right: 0 !important;
+    color: #fff !important; }
+  .ads-search .ads-now .type-grow {
+    background-color: #69bc2a;
+    border: 1px solid #69bc2a;
+    text-align: center !important;
+    padding-top: 0 !important;
+    padding-right: 0 !important;
+    color: #fff !important; }
   .ads-search .ads-now .card {
     background-color: #f6f8fa; }
     .ads-search .ads-now .card .card-title {
@@ -231,9 +256,27 @@ body {
     .ads-search .ads-now .key-words span {
       padding-top: 0 !important;
       margin: 0; }
+    .ads-search .ads-now .key-words .last {
+      position: absolute;
+      left: 2%;
+      color: #e5233d;
+      font-weight: bold; }
+  .ads-search .ads-now .card-grow .last {
+    color: #69bc2a;
+    font-weight: bold; }
+  .ads-search .ads-now nav {
+    position: relative; }
+    .ads-search .ads-now nav .pagination {
+      margin-top: 35px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); }
 
 footer {
   background-color: #2b79c2; }
+  footer .logo-content-logo {
+    padding-right: 10px; }
   footer .logo {
     padding-bottom: 10px;
     text-align: right;
@@ -259,9 +302,23 @@ footer {
   footer .social-content {
     padding-right: 90px;
     padding-top: 10px; }
+    footer .social-content .social i {
+      display: inline-block;
+      color: #FFF;
+      border: 1px solid #06162a;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      background-color: #06162a;
+      transition: all .5s ease; }
+      footer .social-content .social i:hover {
+        background-color: #e5233d;
+        bordeR: 1px solid #e5233d; }
     footer .social-content input {
       padding: 15px;
-      background-color: #256CAF;
+      background-color: #256caf;
       border: 0;
       color: #fff !important;
       border-radius: 9px;
@@ -281,7 +338,7 @@ footer {
       color: #fff;
       margin-bottom: 10px; }
   footer .copy {
-    background-color: #256CAF;
+    background-color: #256caf;
     padding: 20px;
     position: relative; }
     footer .copy h5 {
@@ -293,12 +350,17 @@ footer {
     footer .copy .logo-funun {
       width: 50%;
       float: left; }
+      footer .copy .logo-funun img {
+        width: 30%; }
 
 @media (max-width: 1024px) {
   .slider .carousel-inner .carousel-caption {
     top: 28%;
     right: 48%;
-    width: 39%; } }
+    width: 39%; }
+
+  footer .social-content input {
+    width: 73% !important; } }
 @media (max-width: 800px) {
   .navbar-nav {
     margin-left: auto;
@@ -306,7 +368,26 @@ footer {
     padding: 0;
     margin-top: 5px; }
 
-  footer .help-content, footer .social-content {
+  .logo .logo-content p {
+    bottom: -33% !important; }
+
+  .search .country,
+  .search .city {
+    width: 100% !important;
+    float: none !important; }
+  .search .price input {
+    width: 100% !important; }
+
+  .ads-now .key-words {
+    position: inherit !important;
+    margin-top: 10px !important; }
+
+  footer .logo-content-logo {
+    padding-right: 0px !important; }
+  footer .logo .logo-content p {
+    bottom: 2% !important; }
+  footer .help-content,
+  footer .social-content {
     padding-right: 0 !important; } }
 @media (max-width: 524px) {
   .upper-nav .logo img {
@@ -336,9 +417,19 @@ footer {
     position: inherit;
     margin-top: 34px !important; }
 
-  footer .help-content, footer .social-content {
-    padding-right: 0 !important; } }
-.ads-search .ads .card .type, .ads-search .ads .type-grow {
+  .ads-search .ads-now nav .pagination {
+    left: 56% !important; }
+
+  footer .help-content,
+  footer .social-content {
+    padding-right: 0 !important; }
+  footer .copy .logo-funun {
+    width: 100% !important;
+    text-align: right; }
+    footer .copy .logo-funun img {
+      width: 40% !important;
+      margin-top: 15px; } }
+.ads-search .ads .card .type, .ads-search .ads .type-grow, .ads-search .ads-now .type, .ads-search .ads-now .type-grow {
   position: absolute;
   top: 2%;
   right: 2%;

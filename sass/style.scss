@@ -3,7 +3,7 @@
 $mainColor: #2b79c2;
 $buttonColor1: #e5233d;
 $buttonColor2: #69bc2a;
-$mainFont: 'Cairo', sans-serif;
+$mainFont: "Cairo", sans-serif;
 
 body {
   direction: rtl;
@@ -90,6 +90,15 @@ body {
       }
     }
   }
+}
+
+#btnclose{
+  background-color: #ddd;
+  width: 100% !important;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
 }
 
 // start slider
@@ -254,14 +263,17 @@ body {
           font-size: 15px;
           color: $buttonColor1;
           font-weight: bold;
+          position: absolute;
+          left: 2%;
         }
       }
     }
     .type-grow {
       @extend %typeads;
-      text-align: right !important;
+      text-align: center !important;
       border: 1px solid $buttonColor2 !important;
       background-color: $buttonColor2 !important;
+      padding-right: 0 !important;
     }
     .grow-card {
       .key-words {
@@ -295,27 +307,45 @@ body {
       background-color: #eee;
       padding-top: 5px;
     }
-    .ad-card{
+    .ad-card {
       background-color: $mainColor;
       height: 250px;
       position: relative;
-      .add-your-ad{
+      .add-your-ad {
         background-color: #fff;
         height: 150px;
         width: 100%;
         position: absolute;
         top: 20%;
-        .content{
+        .content {
           padding-top: 40px;
         }
       }
     }
   }
   .ads-now {
-    padding-bottom: 30px;
+    padding-bottom: 70px;
     border: 1px solid #ddd;
     h6 {
       margin: 0;
+    }
+    .type {
+      @extend %typeads;
+      background-color: $buttonColor1;
+      border: 1px solid $buttonColor1;
+      text-align: center !important;
+      padding-top: 0 !important;
+      padding-right: 0 !important;
+      color: #fff !important;
+    }
+    .type-grow {
+      @extend %typeads;
+      background-color: $buttonColor2;
+      border: 1px solid $buttonColor2;
+      text-align: center !important;
+      padding-top: 0 !important;
+      padding-right: 0 !important;
+      color: #fff !important;
     }
     .card {
       background-color: #f6f8fa;
@@ -346,13 +376,38 @@ body {
         padding-top: 0 !important;
         margin: 0;
       }
+      .last{
+        position: absolute;
+        left: 2%;
+        color: $buttonColor1;
+        font-weight: bold;
+      }
+    }
+    .card-grow{
+      .last{
+        color: $buttonColor2;
+        font-weight: bold;
+      }
+    }
+    nav {
+      position: relative;
+      .pagination {
+        margin-top: 35px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
   }
 }
 
 // satrt footer
-footer{
+footer {
   background-color: $mainColor;
+  .logo-content-logo{
+    padding-right: 10px;
+  }
   .logo {
     padding-bottom: 10px;
     text-align: right;
@@ -372,22 +427,40 @@ footer{
       }
     }
   }
-  .help-content{
+  .help-content {
     padding-right: 90px;
     padding-top: 10px;
-    ul{
+    ul {
       list-style-type: square;
-      li{
+      li {
         margin-top: 5px;
       }
     }
   }
-  .social-content{
+  .social-content {
     padding-right: 90px;
     padding-top: 10px;
-    input{
+    .social{
+      i{
+        display: inline-block;
+        color: #FFF; 
+        border: 1px solid #06162a;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background-color: #06162a;
+        transition: all .5s ease;
+        &:hover{
+          background-color: $buttonColor1;
+          bordeR: 1px solid $buttonColor1;
+        }
+      }
+    }
+    input {
       padding: 15px;
-      background-color: #256CAF;
+      background-color: #256caf;
       border: 0;
       color: #fff !important;
       border-radius: 9px;
@@ -397,7 +470,7 @@ footer{
         opacity: 1; /* Firefox */
       }
     }
-    button{
+    button {
       border: 0 !important;
       border: 1px solid $buttonColor1;
       background-color: $buttonColor1;
@@ -409,20 +482,23 @@ footer{
       margin-bottom: 10px;
     }
   }
-  .copy{
-    background-color: #256CAF;
+  .copy {
+    background-color: #256caf;
     padding: 20px;
     position: relative;
-    h5{
+    h5 {
       margin: 0;
       font-size: 15px;
       color: #fff;
       margin-top: 20px;
       float: right;
     }
-    .logo-funun{
+    .logo-funun {
       width: 50%;
       float: left;
+      img{
+        width: 30%;
+      }
     }
   }
 }
@@ -437,6 +513,13 @@ footer{
       }
     }
   }
+  footer{
+    .social-content{
+      input{
+        width: 73% !important;
+      }
+    }
+  }
 }
 
 @media (max-width: 800px) {
@@ -446,8 +529,44 @@ footer{
     padding: 0;
     margin-top: 5px;
   }
-  footer{
-    .help-content, .social-content{
+  .logo{
+    .logo-content{
+      p{
+        bottom: -33% !important;
+      }
+    }
+  }
+  .search{
+    .country,
+    .city {
+      width: 100% !important;
+      float: none !important;
+    }
+    .price{
+      input{
+        width: 100% !important;
+      }
+    }
+  }
+  .ads-now{
+    .key-words{
+      position: inherit !important;
+      margin-top: 10px !important;
+    }
+  }
+  footer {
+    .logo-content-logo{
+      padding-right: 0px !important;
+    }
+    .logo{
+      .logo-content{
+        p{
+          bottom: 2% !important;
+        }
+      }
+    }
+    .help-content,
+    .social-content {
       padding-right: 0 !important;
     }
   }
@@ -500,9 +619,27 @@ footer{
       }
     }
   }
-  footer{
-    .help-content, .social-content{
+  .ads-search{
+    .ads-now nav{
+      .pagination {
+        left: 56% !important;
+      }
+    }
+  } 
+  footer {
+    .help-content,
+    .social-content {
       padding-right: 0 !important;
+    }
+    .copy{
+      .logo-funun{
+        width: 100% !important;
+        text-align: right;
+        img{
+          width: 40% !important;
+          margin-top: 15px;
+        }
+      }
     }
   }
 }
