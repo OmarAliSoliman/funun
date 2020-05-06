@@ -48,7 +48,26 @@ body {
           font-size: 15px !important; }
 
 .navbar {
-  background-color: #2b79c2; }
+  background-color: #2b79c2;
+  position: relative; }
+  .navbar .add-your-ads-search {
+    position: absolute;
+    left: 5%; }
+    .navbar .add-your-ads-search .btn {
+      color: #fff;
+      transition: all .5s linear; }
+    .navbar .add-your-ads-search .btn:first-child {
+      background-color: #e5233d !important;
+      bordeR: 1px solid #e5233d; }
+      .navbar .add-your-ads-search .btn:first-child:hover {
+        background-color: #06162a !important;
+        border: 1px solid #06162a; }
+    .navbar .add-your-ads-search .btn:last-child {
+      background-color: #69bc2a !important;
+      bordeR: 1px solid #69bc2a; }
+      .navbar .add-your-ads-search .btn:last-child:hover {
+        background-color: #06162a !important;
+        border: 1px solid #06162a; }
   .navbar .navbar-toggler {
     color: #fff !important;
     border: 1px solid #fff !important; }
@@ -142,13 +161,20 @@ body {
   background-color: #69bc2a;
   width: 100%;
   color: #fff;
-  font-size: 18px; }
+  font-size: 18px;
+  transition: all .5s linear; }
+  .ads-search .search .btn:hover {
+    background-color: #e5233d; }
 .ads-search .ads {
   padding-bottom: 15px; }
   .ads-search .ads .card {
     display: inline-block;
     width: 100%;
     margin-top: 10px; }
+    .ads-search .ads .card img {
+      transition: all .5s ease-in-out; }
+      .ads-search .ads .card img:hover {
+        filter: grayscale(100%); }
     .ads-search .ads .card .card-body {
       padding: 0 !important; }
     .ads-search .ads .card .card-title {
@@ -235,6 +261,10 @@ body {
     color: #fff !important; }
   .ads-search .ads-now .card {
     background-color: #f6f8fa; }
+    .ads-search .ads-now .card img {
+      transition: all .5s ease; }
+      .ads-search .ads-now .card img:hover {
+        filter: grayscale(100%); }
     .ads-search .ads-now .card .card-title {
       font-size: 18px;
       padding: 20px 20px 0 0; }
@@ -336,7 +366,10 @@ footer {
       width: 70%;
       margin-top: 10px;
       color: #fff;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      transition: all .5s ease-in-out; }
+      footer .social-content button:hover {
+        background-color: #06162a; }
   footer .copy {
     background-color: #256caf;
     padding: 20px;
@@ -432,6 +465,7 @@ footer {
 .ads-search .ads .card .type, .ads-search .ads .type-grow, .ads-search .ads-now .type, .ads-search .ads-now .type-grow {
   position: absolute;
   top: 2%;
+  z-index: 5;
   right: 2%;
   display: inline-block;
   color: #fff;
