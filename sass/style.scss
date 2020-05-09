@@ -493,6 +493,13 @@ body {
   text-align: right;
   background-color: #ddd;
   padding: 20px;
+  a{
+    color: #000 !important;
+    text-decoration: none;
+    &:hover{
+      color: $mainColor !important;
+    }
+  }
   i {
     font-size: 13px;
   }
@@ -848,8 +855,7 @@ footer {
     position: relative;
     color: #fff;
     img {
-      width: 10%;
-      float: right;
+      width: 50%;
     }
     .logo-content {
       text-align: right;

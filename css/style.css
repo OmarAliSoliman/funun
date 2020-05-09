@@ -339,6 +339,11 @@ body {
   text-align: right;
   background-color: #ddd;
   padding: 20px; }
+  .path a {
+    color: #000 !important;
+    text-decoration: none; }
+    .path a:hover {
+      color: #2b79c2 !important; }
   .path i {
     font-size: 13px; }
 
@@ -594,8 +599,7 @@ footer {
     position: relative;
     color: #fff; }
     footer .logo img {
-      width: 10%;
-      float: right; }
+      width: 50%; }
     footer .logo .logo-content {
       text-align: right; }
       footer .logo .logo-content p {
