@@ -10,6 +10,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
@@ -72,7 +73,56 @@
       </button>
       <div class="add-your-ads-search">
         <button class="btn"><i class="fas fa-plus"></i> اضف اعلانك</button>
-        <button class="btn"><i class="fas fa-search"></i></button>
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"><i class="fas fa-search"></i></button>
+        <div class="modal fade text-right" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <!-- <h5 class="modal-title" id="exampleModalLabel">بحث</h5> -->
+                <button type="button text-left" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <input
+                    class="search-all"
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="بحث"
+                    style="width: 100%;"
+                  />
+                  <div class="country mt-2">
+                    <label>المدينة</label><br />
+                    <select>
+                      <option disabled selected>جميع المدن</option>
+                    </select>
+                  </div>
+                  <div class="city mt-2">
+                    <label>المنطقة</label><br />
+                    <select>
+                      <option disabled selected>اختر</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                  <div class="price mt-4">
+                    <label>السعر</label><br />
+                    <input type="number" name="" id="" placeholder="من" />
+                    <input type="number" name="" id="" placeholder="الى" />
+                  </div>
+                  <div class="clear"></div>
+                  <div class="boxes mt-2">
+                    <input type="checkbox" name="" id="" /> اعلانات مع صور<br />
+                    <input type="checkbox" name="" id="" /> علانات مثبته<br />
+                    <input type="checkbox" name="" id="" /> تصفح الاعلانات <br />
+                  </div>
+                  <a href="./search.html" class="btn mt-2">بحث</a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="container">
@@ -111,7 +161,7 @@
     <!-- end nav bar -->
 
     <!-- start slider -->
-    <div class="slider">
+    <div class="slider" data-aos="fade-in">
       <div class="container-fluid">
         <div
           id="carouselExampleCaptions"
@@ -231,31 +281,31 @@
               </buton>
             </div>
             <div class="part mt-5">
-              <div class="card text-center">
+              <div class="card text-center" data-aos="fade-up">
                 <img src="./images/parts/part2.jpg" />
                 <div class="part-name">
                   <a href="#"> <h5>حراج السيارات</h5></a>
                 </div>
               </div>
-              <div class="card text-center">
+              <div class="card text-center" data-aos="fade-up">
                 <img src="./images/parts/part1.jpg" />
                 <div class="part-name">
                   <a href="#"> <h5>حراج العقارات</h5></a>
                 </div>
               </div>
-              <div class="card text-center">
+              <div class="card text-center" data-aos="fade-up">
                 <img src="./images/parts/part3.jpeg" />
                 <div class="part-name">
                   <a href="#"> <h5>حراج الالكترونيات</h5></a>
                 </div>
               </div>
-              <div class="card text-center">
+              <div class="card text-center" data-aos="fade-up">
                 <img src="./images/parts/part4.jpeg" />
                 <div class="part-name">
                   <a href="#"> <h5>حراج الاغنام والابل</h5></a>
                 </div>
               </div>
-              <div class="card ad-card text-center">
+              <div class="card ad-card text-center" data-aos="fade-up">
                 <div class="add-your-ad">
                   <div class="content">
                     <h4>ضع اعلانك هنا</h4>
@@ -275,13 +325,17 @@
                     <div class="swiper-slide">
                       <div class="card">
                         <span class="type">اعلان</span>
-                        <img
+                        <a href="#">
+                          <img
                           src="./images/post-ads/ad2.jpg"
                           class="card-img-top"
                           alt="..."
                         />
+                        </a>
                         <div class="card-body">
-                          <h5 class="card-title">عنوان الاعلان قابل للتعديل</h5>
+                          <a href="#">
+                            <h5 class="card-title" data-aos="zoom-in">عنوان الاعلان قابل للتعديل</h5>
+                          </a>
                           <span
                             ><i class="fas fa-map-marker-alt"></i>المدينة</span
                           ><span><i class="fas fa-clock"></i>قبل 3 ساعات</span>
@@ -295,13 +349,17 @@
                     <div class="swiper-slide">
                       <div class="card grow-card">
                         <span class="type type-grow">مزايده</span>
-                        <img
+                        <a href="#">
+                          <img
                           src="./images/post-ads/ad3.jpg"
                           class="card-img-top"
                           alt="..."
                         />
+                        </a>
                         <div class="card-body">
-                          <h5 class="card-title">عنوان الاعلان قابل للتعديل</h5>
+                          <a href="#">
+                            <h5 class="card-title" data-aos="zoom-in">عنوان الاعلان قابل للتعديل</h5>
+                          </a>
                           <span
                             ><i class="fas fa-map-marker-alt"></i>المدينة</span
                           ><span><i class="fas fa-clock"></i>قبل 3 ساعات</span>
@@ -315,13 +373,17 @@
                     <div class="swiper-slide">
                       <div class="card">
                         <span class="type">اعلان</span>
-                        <img
+                        <a href="#">
+                          <img
                           src="./images/post-ads/ad2.jpg"
                           class="card-img-top"
                           alt="..."
                         />
+                        </a>
                         <div class="card-body">
-                          <h5 class="card-title">عنوان الاعلان قابل للتعديل</h5>
+                          <a href="#">
+                            <h5 class="card-title" data-aos="zoom-in">عنوان الاعلان قابل للتعديل</h5>
+                          </a>
                           <span
                             ><i class="fas fa-map-marker-alt"></i>المدينة</span
                           ><span><i class="fas fa-clock"></i>قبل 3 ساعات</span>
@@ -335,13 +397,17 @@
                     <div class="swiper-slide">
                       <div class="card">
                         <span class="type">اعلان</span>
-                        <img
-                          src="./images/post-ads/ad2.jpg"
+                        <a href="#">
+                          <img
+                          src="./images/post-ads/ad3.jpg"
                           class="card-img-top"
                           alt="..."
                         />
+                        </a>
                         <div class="card-body">
-                          <h5 class="card-title">عنوان الاعلان قابل للتعديل</h5>
+                          <a href="#">
+                            <h5 class="card-title" data-aos="zoom-in">عنوان الاعلان قابل للتعديل</h5>
+                          </a>
                           <span
                             ><i class="fas fa-map-marker-alt"></i>المدينة</span
                           ><span><i class="fas fa-clock"></i>قبل 3 ساعات</span>
@@ -355,13 +421,17 @@
                     <div class="swiper-slide">
                       <div class="card">
                         <span class="type">اعلان</span>
-                        <img
+                        <a href="#">
+                          <img
                           src="./images/post-ads/ad2.jpg"
                           class="card-img-top"
                           alt="..."
                         />
+                        </a>
                         <div class="card-body">
-                          <h5 class="card-title">عنوان الاعلان قابل للتعديل</h5>
+                          <a href="#">
+                            <h5 class="card-title" data-aos="zoom-in">عنوان الاعلان قابل للتعديل</h5>
+                          </a>
                           <span
                             ><i class="fas fa-map-marker-alt"></i>المدينة</span
                           ><span><i class="fas fa-clock"></i>قبل 3 ساعات</span>
@@ -375,13 +445,17 @@
                     <div class="swiper-slide">
                       <div class="card">
                         <span class="type">اعلان</span>
-                        <img
-                          src="./images/post-ads/ad2.jpg"
+                        <a href="#">
+                          <img
+                          src="./images/post-ads/ad3.jpg"
                           class="card-img-top"
                           alt="..."
                         />
+                        </a>
                         <div class="card-body">
-                          <h5 class="card-title">عنوان الاعلان قابل للتعديل</h5>
+                          <a href="#">
+                            <h5 class="card-title" data-aos="zoom-in">عنوان الاعلان قابل للتعديل</h5>
+                          </a>
                           <span
                             ><i class="fas fa-map-marker-alt"></i>المدينة</span
                           ><span><i class="fas fa-clock"></i>قبل 3 ساعات</span>
@@ -400,17 +474,21 @@
             </div>
             <div class="ads-now mt-5 text-right">
               <h6>اعلانات مضافة حديثا</h6>
-              <div class="card mt-2" style="max-width: 100%;">
+              <div class="card mt-2" style="max-width: 100%;" data-aos="fade-in">
                 <div class="row no-gutters">
                   <div class="col-md-4">
                     <span class="type">اعلان</span>
-                    <img src="./images/new-ads/new1.jpeg" width="100%" alt="" />
+                    <a href="#">
+                      <img src="./images/new-ads/new1.jpeg" width="100%" alt="" />
+                    </a>
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">
-                        عنوان الاعلان قابل للتعديل ويمكن تغييره
-                      </h5>
+                      <a href="#">
+                        <h5 class="card-title" data-aos="zoom-in">
+                          عنوان الاعلان قابل للتعديل ويمكن تغييره
+                        </h5>
+                      </a>
                       <span><i class="fas fa-map-marker-alt"></i>المدينة</span
                       ><span><i class="fas fa-clock"></i>قبل 3 ساعات</span>
                       <div class="key-words">
@@ -422,17 +500,21 @@
                 </div>
               </div>
               <!-- rebeat card -->
-              <div class="card card-grow mt-2" style="max-width: 100%;">
+              <div class="card card-grow mt-2" style="max-width: 100%;" data-aos="fade-in">
                 <div class="row no-gutters">
                   <div class="col-md-4">
                     <span class="type-grow">مزايدة</span>
-                    <img src="./images/new-ads/new2.jpeg" width="100%" alt="" />
+                    <a href="#">
+                      <img src="./images/new-ads/new2.jpeg" width="100%" alt="" />
+                    </a>
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">
-                        عنوان الاعلان قابل للتعديل ويمكن تغييره
-                      </h5>
+                      <a href="#">
+                        <h5 class="card-title" data-aos="zoom-in">
+                          عنوان الاعلان قابل للتعديل ويمكن تغييره
+                        </h5>
+                      </a>
                       <span><i class="fas fa-map-marker-alt"></i>المدينة</span
                       ><span><i class="fas fa-clock"></i>قبل 3 ساعات</span>
                       <div class="key-words">
@@ -444,17 +526,21 @@
                 </div>
               </div>
               <!-- rebeat card -->
-              <div class="card mt-2" style="max-width: 100%;">
+              <div class="card mt-2" style="max-width: 100%;" data-aos="fade-in">
                 <div class="row no-gutters">
                   <div class="col-md-4">
                     <span class="type">اعلان</span>
-                    <img src="./images/new-ads/new3.jpeg" width="100%" alt="" />
+                    <a href="#">
+                      <img src="./images/new-ads/new3.jpeg" width="100%" alt="" />
+                    </a>
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">
-                        عنوان الاعلان قابل للتعديل ويمكن تغييره
-                      </h5>
+                      <a href="#">
+                        <h5 class="card-title" data-aos="zoom-in">
+                          عنوان الاعلان قابل للتعديل ويمكن تغييره
+                        </h5>
+                      </a>
                       <span><i class="fas fa-map-marker-alt"></i>المدينة</span
                       ><span><i class="fas fa-clock"></i>قبل 3 ساعات</span>
                       <div class="key-words">
@@ -466,17 +552,21 @@
                 </div>
               </div>
               <!-- rebeat card -->
-              <div class="card card-grow mt-2" style="max-width: 100%;">
+              <div class="card card-grow mt-2" style="max-width: 100%;" data-aos="fade-in">
                 <div class="row no-gutters">
                   <div class="col-md-4">
                     <span class="type-grow">مزايدة</span>
-                    <img src="./images/new-ads/new4.jpg" width="100%" alt="" />
+                    <a href="#">
+                      <img src="./images/new-ads/new4.jpg" width="100%" alt="" />
+                    </a>
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">
-                        عنوان الاعلان قابل للتعديل ويمكن تغييره
-                      </h5>
+                      <a href="#">
+                        <h5 class="card-title" data-aos="zoom-in">
+                          عنوان الاعلان قابل للتعديل ويمكن تغييره
+                        </h5>
+                      </a>
                       <span><i class="fas fa-map-marker-alt"></i>المدينة</span
                       ><span><i class="fas fa-clock"></i>قبل 3 ساعات</span>
                       <div class="key-words">
@@ -488,17 +578,21 @@
                 </div>
               </div>
               <!-- rebeat card -->
-              <div class="card mt-2" style="max-width: 100%;">
+              <div class="card mt-2" style="max-width: 100%;" data-aos="fade-in">
                 <div class="row no-gutters">
                   <div class="col-md-4">
                     <span class="type">اعلان</span>
-                    <img src="./images/new-ads/new5.jpeg" width="100%" alt="" />
+                    <a href="#">
+                      <img src="./images/new-ads/new5.jpeg" width="100%" alt="" />
+                    </a>
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">
-                        عنوان الاعلان قابل للتعديل ويمكن تغييره
-                      </h5>
+                      <a href="#">
+                        <h5 class="card-title" data-aos="zoom-in">
+                          عنوان الاعلان قابل للتعديل ويمكن تغييره
+                        </h5>
+                      </a>
                       <span><i class="fas fa-map-marker-alt"></i>المدينة</span
                       ><span><i class="fas fa-clock"></i>قبل 3 ساعات</span>
                       <div class="key-words">
@@ -510,17 +604,21 @@
                 </div>
               </div>
               <!-- rebeat card -->
-              <div class="card card-grow mt-2" style="max-width: 100%;">
+              <div class="card card-grow mt-2" style="max-width: 100%;" data-aos="fade-in">
                 <div class="row no-gutters">
                   <div class="col-md-4">
                     <span class="type-grow">مزايدة</span>
-                    <img src="./images/new-ads/new6.jpg" width="100%" alt="" />
+                    <a href="#">
+                      <img src="./images/new-ads/new6.jpg" width="100%" alt="" />
+                    </a>
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">
-                        عنوان الاعلان قابل للتعديل ويمكن تغييره
-                      </h5>
+                      <a href="#">
+                        <h5 class="card-title" data-aos="zoom-in">
+                          عنوان الاعلان قابل للتعديل ويمكن تغييره
+                        </h5>
+                      </a>
                       <span><i class="fas fa-map-marker-alt"></i>المدينة</span
                       ><span><i class="fas fa-clock"></i>قبل 3 ساعات</span>
                       <div class="key-words">
@@ -565,7 +663,7 @@
 
     <!-- start footer -->
     <footer class="pt-5 mt-3">
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
           <div class="col-sm-12 col-lg-4">
             <div class="logo-content-logo">
@@ -622,12 +720,14 @@
         </div>
       </div>
       <div class="copy">
-        <h5 class="text-right">جميع الحقوق محفوظه موقع راهن 2020</h5>
-        <div class="logo-funun">
-          <span class="text-white">تصميم وبرمجة</span>
-          <img src="./images/logo.pngt"/>
+        <div class="container">
+          <h5 class="text-right">جميع الحقوق محفوظه موقع راهن 2020</h5>
+          <div class="logo-funun">
+            <span class="text-white">تصميم وبرمجة</span>
+            <img src="./images/logo.pngt"/>
+          </div>
+          <div class="clear"></div>
         </div>
-        <div class="clear"></div>
       </div>
     </footer>
     <!-- end footer -->
@@ -647,6 +747,7 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="./js/main.js"></script>
   </body>

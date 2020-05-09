@@ -20,13 +20,4 @@ $(document).ready(function(){
       swiper: galleryThumbs,
     },
   });
-
-  var swiper = new Swiper('.swiper-related-ads', {
-    direction: 'vertical',
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
-
 })

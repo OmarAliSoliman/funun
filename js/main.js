@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  
+  AOS.init();
+
   var swiper = new Swiper(".swiper-container", {
     slidesPerView: 1,
     spaceBetween: 10,
@@ -22,7 +25,6 @@ $(document).ready(function () {
       },
     },
   });
-
 });
 
 var btnClose = document.querySelector('#btnclose');

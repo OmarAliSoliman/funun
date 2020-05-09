@@ -201,6 +201,37 @@ body {
   }
 }
 
+.modal{
+  form{
+    input{
+      border-radius: 5px !important;
+      border: 0 !important;
+      border: 1px solid #ddd !important;
+      padding: 7px !important;
+    }
+    .country,
+    .city {
+      width: 50%;
+      float: right;
+      select {
+        width: 90%;
+        border: 0;
+        background-color: transparent;
+        border: 1px solid #ddd;
+        padding: 7px;
+        border-radius: 5px;
+      }
+    }
+    .price {
+      input {
+        width: 45%;
+        margin: 4px;
+        float: right;
+      }
+    }
+  }
+}
+
 // start ads-search
 .ads-search {
   .ads,
@@ -266,6 +297,13 @@ body {
       }
       .card-body {
         padding: 0 !important;
+        a{
+          color: #000 !important;
+          text-decoration: none !important;
+          &:hover{
+            color: $mainColor !important;
+          }
+        }
       }
       .card-title {
         margin: 0;
@@ -405,6 +443,13 @@ body {
       }
       .card-body {
         padding: 0;
+        a{
+          color: #000 !important;
+          text-decoration: none;
+          &:hover{
+            color: $mainColor !important;
+          }
+        }
       }
     }
     .key-words {
@@ -520,21 +565,179 @@ body {
 
 // start show ads
 .show-ads {
-  .ads-header {
-    .header {
-      margin-top: 15px;
-      font-size: 20px;
-      float: right;
+  .ads-info {
+    .swiper-container {
+      width: 100%;
+      height: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      .special-ads {
+        z-index: 3;
+        display: inline-block;
+        position: absolute;
+        background-color: $buttonColor2;
+        border: 1px solid $buttonColor2;
+        width: 15%;
+        padding: 10px !important;
+        text-align: center;
+        border-radius: 10px;
+        color: #fff;
+        left: 3%;
+        top: 2%;
+      }
     }
-    .price {
-      color: #fff;
-      padding: 10px;
-      width: 20%;
+    .swiper-slider {
+      .swiper-slide {
+        background-size: cover;
+        background-position: center;
+      }
+      .gallery-top {
+        height: 80%;
+        width: 100%;
+      }
+      .gallery-thumbs {
+        height: 20%;
+        box-sizing: border-box;
+        padding: 10px 0;
+      }
+      .gallery-thumbs .swiper-slide {
+        height: 100%;
+        opacity: 0.4;
+      }
+      .gallery-thumbs .swiper-slide-thumb-active {
+        opacity: 1;
+      }
+      .swiper-wrapper {
+        .image-top {
+          height: 70vh;
+        }
+      }
+      .swiper-wrapper {
+        .image-down {
+          height: 20vh;
+        }
+      }
+    }
+    .ads-header {
+      .header {
+        margin-top: 15px;
+        font-size: 20px;
+        float: right;
+      }
+      .price {
+        color: #fff;
+        padding: 10px;
+        width: 20%;
+        text-align: center;
+        font-size: 20px;
+        float: left;
+        border: 1px solid $buttonColor1;
+        background-color: $buttonColor1;
+      }
+    }
+    .table-infor {
+      .table {
+        margin-bottom: 0 !important;
+      }
+      margin-top: -10px !important;
+      border: 1px solid #ddd;
+      td {
+        padding-right: 40px !important;
+      }
+      h6 {
+        font-size: 25px;
+        padding-right: 20px;
+        padding-top: 10px;
+        margin: 10px 0px 20px 0px;
+        i {
+          color: $mainColor;
+          font-size: 25px;
+        }
+      }
+      .table-word {
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+    }
+    .descr {
+      border: 1px solid #ddd;
+      h6 {
+        font-size: 25px;
+        padding-right: 20px;
+        padding-top: 10px;
+        margin: 10px 0px 20px 0px;
+        i {
+          color: $mainColor;
+          font-size: 25px;
+        }
+      }
+      .desr-par {
+        line-height: 25px;
+        color: #444;
+      }
+    }
+    .contact-data {
+      border: 1px solid #ddd;
+      h6 {
+        font-size: 25px;
+        padding-right: 20px;
+        padding-top: 10px;
+        margin: 10px 0px 20px 0px;
+        i {
+          color: $mainColor;
+          font-size: 25px;
+        }
+      }
+      ul {
+        padding: 0;
+        padding-right: 20px;
+        li {
+          display: inline-block;
+          margin-left: 20px;
+          i {
+            font-size: 20px;
+            margin-left: 10px;
+            color: #444;
+          }
+          span {
+            font-size: 20px;
+            color: #444;
+          }
+        }
+      }
+    }
+    .social-media {
       text-align: center;
-      font-size: 20px;
-      float: left;
-      border: 1px solid $buttonColor1;
-      background-color: $buttonColor1;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+      span {
+        margin-top: 35px;
+        display: inline-block;
+        width: 15%;
+        i {
+          color: #888;
+          font-size: 30px;
+          &:hover{
+            color: $mainColor;
+          }
+        }
+      }
+    }
+    form {
+      margin-top: 50px;
+      input {
+        border: 0;
+        border: 1px solid #ddd;
+        padding: 10px;
+      }
+      button {
+        padding: 10px;
+        background-color: $buttonColor1;
+        border: 0;
+        border: 1px solid $buttonColor1;
+        color: #fff;
+      }
     }
   }
   .related-ads {
@@ -546,26 +749,45 @@ body {
         font-size: 25px;
       }
     }
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-    }
     .card {
+      background-color: #f6f8fa;
+      img {
+        transition: all 0.5s ease;
+        &:hover {
+          filter: grayscale(100%);
+        }
+      }
+      .card-title {
+        font-size: 18px;
+        padding: 20px 20px 0 0;
+      }
+      span {
+        display: inline-block;
+        margin-left: 15px;
+        padding: 0px 20px 10px 0;
+        color: #666;
+        font-size: 14px;
+        i {
+          margin-left: 5px;
+        }
+      }
+      .card-body {
+        padding: 0;
+        a{
+          color: #000 !important;
+          text-decoration: none;
+          &:hover{
+            color: $mainColor !important;
+          }
+        }
+      }
+      .grow-card {
+        .key-words {
+          .last {
+            color: $buttonColor2 !important;
+          }
+        }
+      }
       .type {
         @extend %typeads;
         background-color: $buttonColor1;
@@ -587,76 +809,28 @@ body {
       }
       .key-words {
         background-color: #ddd;
-        position: absolute;
+        position: inherit;
         bottom: 0;
         width: 100%;
         padding: 10px !important;
         span {
           padding-top: 0 !important;
           margin: 0;
-          position: absolute;
-          right: 0;
-          font-size: 10px;
+          // position: absolute;
+          // right: 0;
+          padding-right: 0 !important;
+          font-size: 12px;
+          text-align: right;
         }
         .last {
           position: absolute;
           left: 0%;
           color: $buttonColor1;
           font-weight: bold;
+          font-size: 15px;
+          padding-left: 5px;
+          padding-top: 3px !important;
         }
-      }
-    }
-  }
-  .swiper-container {
-    width: 100%;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    .special-ads {
-      z-index: 3;
-      display: inline-block;
-      position: absolute;
-      background-color: $buttonColor2;
-      border: 1px solid $buttonColor2;
-      width: 15%;
-      padding: 10px !important;
-      text-align: center;
-      border-radius: 10px;
-      color: #fff;
-      left: 3%;
-      top: 2%;
-    }
-  }
-  .swiper-slider {
-    .swiper-slide {
-      background-size: cover;
-      background-position: center;
-    }
-    .gallery-top {
-      height: 80%;
-      width: 100%;
-    }
-    .gallery-thumbs {
-      height: 20%;
-      box-sizing: border-box;
-      padding: 10px 0;
-    }
-    .gallery-thumbs .swiper-slide {
-      height: 100%;
-      opacity: 0.4;
-    }
-    .gallery-thumbs .swiper-slide-thumb-active {
-      opacity: 1;
-    }
-    .swiper-wrapper {
-      .image-top {
-        height: 70vh;
-      }
-    }
-    .swiper-wrapper {
-      .image-down {
-        height: 20vh;
       }
     }
   }
@@ -722,6 +896,7 @@ footer {
       padding: 15px;
       background-color: #256caf;
       border: 0;
+      width: 80%;
       color: #fff !important;
       border-radius: 9px;
       text-align: center;
@@ -736,7 +911,7 @@ footer {
       background-color: $buttonColor1;
       padding: 15px;
       border-radius: 9px;
-      width: 70%;
+      width: 80%;
       margin-top: 10px;
       color: #fff;
       margin-bottom: 10px;
@@ -780,7 +955,7 @@ footer {
   footer {
     .social-content {
       input {
-        width: 73% !important;
+        // width: 73% !important;
       }
     }
   }
@@ -866,6 +1041,17 @@ footer {
       }
     }
   }
+
+  .show-ads{
+    .ads-info{
+      .price{
+        width: 50% !important;
+        float: right !important;
+        margin-top: 10px !important;
+      }
+    }
+  }
+
   .ads-search {
     .ads,
     .ads {

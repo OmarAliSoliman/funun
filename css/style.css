@@ -128,6 +128,28 @@ body {
   height: 7px;
   border-radius: 50%; }
 
+.modal form input {
+  border-radius: 5px !important;
+  border: 0 !important;
+  border: 1px solid #ddd !important;
+  padding: 7px !important; }
+.modal form .country,
+.modal form .city {
+  width: 50%;
+  float: right; }
+  .modal form .country select,
+  .modal form .city select {
+    width: 90%;
+    border: 0;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    padding: 7px;
+    border-radius: 5px; }
+.modal form .price input {
+  width: 45%;
+  margin: 4px;
+  float: right; }
+
 .ads-search .ads,
 .ads-search .search {
   border: 1px solid #ddd; }
@@ -177,6 +199,11 @@ body {
         filter: grayscale(100%); }
     .ads-search .ads .card .card-body {
       padding: 0 !important; }
+      .ads-search .ads .card .card-body a {
+        color: #000 !important;
+        text-decoration: none !important; }
+        .ads-search .ads .card .card-body a:hover {
+          color: #2b79c2 !important; }
     .ads-search .ads .card .card-title {
       margin: 0;
       padding: 10px 15px 0 0;
@@ -277,6 +304,11 @@ body {
         margin-left: 5px; }
     .ads-search .ads-now .card .card-body {
       padding: 0; }
+      .ads-search .ads-now .card .card-body a {
+        color: #000 !important;
+        text-decoration: none; }
+        .ads-search .ads-now .card .card-body a:hover {
+          color: #2b79c2 !important; }
   .ads-search .ads-now .key-words {
     background-color: #ddd;
     position: absolute;
@@ -354,81 +386,13 @@ body {
   background-color: #69bc2a;
   border: 1px solid #69bc2a; }
 
-.show-ads .ads-header .header {
-  margin-top: 15px;
-  font-size: 20px;
-  float: right; }
-.show-ads .ads-header .price {
-  color: #fff;
-  padding: 10px;
-  width: 20%;
-  text-align: center;
-  font-size: 20px;
-  float: left;
-  border: 1px solid #e5233d;
-  background-color: #e5233d; }
-.show-ads .related-ads h6 {
-  margin-top: 15px;
-  font-size: 25px; }
-  .show-ads .related-ads h6 i {
-    color: #2b79c2;
-    font-size: 25px; }
-.show-ads .related-ads .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center; }
-.show-ads .related-ads .card .type {
-  background-color: #e5233d;
-  border: 1px solid #e5233d;
-  top: 5% !important;
-  text-align: center !important;
-  padding-top: 0 !important;
-  padding-right: 0 !important;
-  color: #fff !important; }
-.show-ads .related-ads .card .type-grow {
-  background-color: #69bc2a;
-  top: 5% !important;
-  border: 1px solid #69bc2a;
-  text-align: center !important;
-  padding-top: 0 !important;
-  padding-right: 0 !important; }
-.show-ads .related-ads .card .key-words {
-  background-color: #ddd;
-  position: absolute;
-  bottom: 0;
+.show-ads .ads-info .swiper-container {
   width: 100%;
-  padding: 10px !important; }
-  .show-ads .related-ads .card .key-words span {
-    padding-top: 0 !important;
-    margin: 0;
-    position: absolute;
-    right: 0;
-    font-size: 10px; }
-  .show-ads .related-ads .card .key-words .last {
-    position: absolute;
-    left: 0%;
-    color: #e5233d;
-    font-weight: bold; }
-.show-ads .swiper-container {
-  width: 100%;
-  height: 300px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
   position: relative; }
-  .show-ads .swiper-container .special-ads {
+  .show-ads .ads-info .swiper-container .special-ads {
     z-index: 3;
     display: inline-block;
     position: absolute;
@@ -441,25 +405,184 @@ body {
     color: #fff;
     left: 3%;
     top: 2%; }
-.show-ads .swiper-slider .swiper-slide {
+.show-ads .ads-info .swiper-slider .swiper-slide {
   background-size: cover;
   background-position: center; }
-.show-ads .swiper-slider .gallery-top {
+.show-ads .ads-info .swiper-slider .gallery-top {
   height: 80%;
   width: 100%; }
-.show-ads .swiper-slider .gallery-thumbs {
+.show-ads .ads-info .swiper-slider .gallery-thumbs {
   height: 20%;
   box-sizing: border-box;
   padding: 10px 0; }
-.show-ads .swiper-slider .gallery-thumbs .swiper-slide {
+.show-ads .ads-info .swiper-slider .gallery-thumbs .swiper-slide {
   height: 100%;
   opacity: 0.4; }
-.show-ads .swiper-slider .gallery-thumbs .swiper-slide-thumb-active {
+.show-ads .ads-info .swiper-slider .gallery-thumbs .swiper-slide-thumb-active {
   opacity: 1; }
-.show-ads .swiper-slider .swiper-wrapper .image-top {
+.show-ads .ads-info .swiper-slider .swiper-wrapper .image-top {
   height: 70vh; }
-.show-ads .swiper-slider .swiper-wrapper .image-down {
+.show-ads .ads-info .swiper-slider .swiper-wrapper .image-down {
   height: 20vh; }
+.show-ads .ads-info .ads-header .header {
+  margin-top: 15px;
+  font-size: 20px;
+  float: right; }
+.show-ads .ads-info .ads-header .price {
+  color: #fff;
+  padding: 10px;
+  width: 20%;
+  text-align: center;
+  font-size: 20px;
+  float: left;
+  border: 1px solid #e5233d;
+  background-color: #e5233d; }
+.show-ads .ads-info .table-infor {
+  margin-top: -10px !important;
+  border: 1px solid #ddd; }
+  .show-ads .ads-info .table-infor .table {
+    margin-bottom: 0 !important; }
+  .show-ads .ads-info .table-infor td {
+    padding-right: 40px !important; }
+  .show-ads .ads-info .table-infor h6 {
+    font-size: 25px;
+    padding-right: 20px;
+    padding-top: 10px;
+    margin: 10px 0px 20px 0px; }
+    .show-ads .ads-info .table-infor h6 i {
+      color: #2b79c2;
+      font-size: 25px; }
+  .show-ads .ads-info .table-infor .table-word {
+    margin: 0 !important;
+    padding: 0 !important; }
+.show-ads .ads-info .descr {
+  border: 1px solid #ddd; }
+  .show-ads .ads-info .descr h6 {
+    font-size: 25px;
+    padding-right: 20px;
+    padding-top: 10px;
+    margin: 10px 0px 20px 0px; }
+    .show-ads .ads-info .descr h6 i {
+      color: #2b79c2;
+      font-size: 25px; }
+  .show-ads .ads-info .descr .desr-par {
+    line-height: 25px;
+    color: #444; }
+.show-ads .ads-info .contact-data {
+  border: 1px solid #ddd; }
+  .show-ads .ads-info .contact-data h6 {
+    font-size: 25px;
+    padding-right: 20px;
+    padding-top: 10px;
+    margin: 10px 0px 20px 0px; }
+    .show-ads .ads-info .contact-data h6 i {
+      color: #2b79c2;
+      font-size: 25px; }
+  .show-ads .ads-info .contact-data ul {
+    padding: 0;
+    padding-right: 20px; }
+    .show-ads .ads-info .contact-data ul li {
+      display: inline-block;
+      margin-left: 20px; }
+      .show-ads .ads-info .contact-data ul li i {
+        font-size: 20px;
+        margin-left: 10px;
+        color: #444; }
+      .show-ads .ads-info .contact-data ul li span {
+        font-size: 20px;
+        color: #444; }
+.show-ads .ads-info .social-media {
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px; }
+  .show-ads .ads-info .social-media span {
+    margin-top: 35px;
+    display: inline-block;
+    width: 15%; }
+    .show-ads .ads-info .social-media span i {
+      color: #888;
+      font-size: 30px; }
+      .show-ads .ads-info .social-media span i:hover {
+        color: #2b79c2; }
+.show-ads .ads-info form {
+  margin-top: 50px; }
+  .show-ads .ads-info form input {
+    border: 0;
+    border: 1px solid #ddd;
+    padding: 10px; }
+  .show-ads .ads-info form button {
+    padding: 10px;
+    background-color: #e5233d;
+    border: 0;
+    border: 1px solid #e5233d;
+    color: #fff; }
+.show-ads .related-ads h6 {
+  margin-top: 15px;
+  font-size: 25px; }
+  .show-ads .related-ads h6 i {
+    color: #2b79c2;
+    font-size: 25px; }
+.show-ads .related-ads .card {
+  background-color: #f6f8fa; }
+  .show-ads .related-ads .card img {
+    transition: all 0.5s ease; }
+    .show-ads .related-ads .card img:hover {
+      filter: grayscale(100%); }
+  .show-ads .related-ads .card .card-title {
+    font-size: 18px;
+    padding: 20px 20px 0 0; }
+  .show-ads .related-ads .card span {
+    display: inline-block;
+    margin-left: 15px;
+    padding: 0px 20px 10px 0;
+    color: #666;
+    font-size: 14px; }
+    .show-ads .related-ads .card span i {
+      margin-left: 5px; }
+  .show-ads .related-ads .card .card-body {
+    padding: 0; }
+    .show-ads .related-ads .card .card-body a {
+      color: #000 !important;
+      text-decoration: none; }
+      .show-ads .related-ads .card .card-body a:hover {
+        color: #2b79c2 !important; }
+  .show-ads .related-ads .card .grow-card .key-words .last {
+    color: #69bc2a !important; }
+  .show-ads .related-ads .card .type {
+    background-color: #e5233d;
+    border: 1px solid #e5233d;
+    top: 5% !important;
+    text-align: center !important;
+    padding-top: 0 !important;
+    padding-right: 0 !important;
+    color: #fff !important; }
+  .show-ads .related-ads .card .type-grow {
+    background-color: #69bc2a;
+    top: 5% !important;
+    border: 1px solid #69bc2a;
+    text-align: center !important;
+    padding-top: 0 !important;
+    padding-right: 0 !important; }
+  .show-ads .related-ads .card .key-words {
+    background-color: #ddd;
+    position: inherit;
+    bottom: 0;
+    width: 100%;
+    padding: 10px !important; }
+    .show-ads .related-ads .card .key-words span {
+      padding-top: 0 !important;
+      margin: 0;
+      padding-right: 0 !important;
+      font-size: 12px;
+      text-align: right; }
+    .show-ads .related-ads .card .key-words .last {
+      position: absolute;
+      left: 0%;
+      color: #e5233d;
+      font-weight: bold;
+      font-size: 15px;
+      padding-left: 5px;
+      padding-top: 3px !important; }
 
 footer {
   background-color: #2b79c2; }
@@ -508,6 +631,7 @@ footer {
       padding: 15px;
       background-color: #256caf;
       border: 0;
+      width: 80%;
       color: #fff !important;
       border-radius: 9px;
       text-align: center; }
@@ -521,7 +645,7 @@ footer {
       background-color: #e5233d;
       padding: 15px;
       border-radius: 9px;
-      width: 70%;
+      width: 80%;
       margin-top: 10px;
       color: #fff;
       margin-bottom: 10px;
@@ -548,10 +672,7 @@ footer {
   .slider .carousel-inner .carousel-caption {
     top: 28%;
     right: 48%;
-    width: 39%; }
-
-  footer .social-content input {
-    width: 73% !important; } }
+    width: 39%; } }
 @media (max-width: 800px) {
   .navbar-nav {
     margin-left: auto;
@@ -598,6 +719,11 @@ footer {
     width: 40px !important;
     height: 40px !important;
     line-height: 40px !important; }
+
+  .show-ads .ads-info .price {
+    width: 50% !important;
+    float: right !important;
+    margin-top: 10px !important; }
 
   .ads-search .ads .card,
   .ads-search .ads .card {
