@@ -1167,6 +1167,18 @@ footer {
   }
 }
 
+.my-profile{
+  form{
+    margin-top: 0 !important;
+  }
+  h5{
+    text-align: right;
+    margin-top: 60px;
+    color: $mainColor;
+    font-weight: bold;
+  }
+}
+
 @media (max-width: 1024px) {
   .slider {
     .carousel-inner {

@@ -834,6 +834,14 @@ footer {
       footer .copy .logo-funun img {
         width: 30%; }
 
+.my-profile form {
+  margin-top: 0 !important; }
+.my-profile h5 {
+  text-align: right;
+  margin-top: 60px;
+  color: #2b79c2;
+  font-weight: bold; }
+
 @media (max-width: 1024px) {
   .slider .carousel-inner .carousel-caption {
     top: 28%;
